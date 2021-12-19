@@ -7,8 +7,8 @@
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lego_loam)/launch/test.rviz" />
 
     <!--- TF -->
-    <node pkg="tf" type="static_transform_publisher" name="camera_init_to_map"  args="0.5 0.0 0.8 0.0 0.0 0.0 ego_vehicle/lidar/lidar ego_vehicle/imu 10" />
-    <node pkg="tf" type="static_transform_publisher" name="base_link_to_camera" args="1.0 0.0 0.0 0.0 0.0 0.0 ego_vehicle/gnss/gt ego_vehicle/lidar/lidar 10" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_init_to_map"  args="0.5 0.0 0.8 0.0 0.0 0.0 /mab /camera_init 10" />
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_camera" args="1.0 0.0 0.0 0.0 0.0 0.0 /camera /base_link 10" />
 
     <!--- LeGO-LOAM -->    
     <node pkg="lego_loam" type="imageProjection"    name="imageProjection"    output="screen"/>
