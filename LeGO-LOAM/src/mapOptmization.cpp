@@ -1527,6 +1527,8 @@ int main(int argc, char** argv)
 {
     ros::init(argc, argv, "lego_loam");
 
+    roa::time::Init();
+
     ROS_INFO("\033[1;32m---->\033[0m Map Optimization Started.");
 
     mapOptimization MO;
